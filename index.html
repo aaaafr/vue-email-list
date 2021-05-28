@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="root">
-        <ul>
+        <ul v-if="listaMail.length === 11">
             <li v-for="(mails, key) in listaMail">
                  {{key}}: {{mails}}
             </li>

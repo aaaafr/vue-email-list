@@ -21,12 +21,23 @@ let app = new Vue({
     mounted(){
         for(var i = 0; i <= 10; i++){
             axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
-            .then(results => {
-                console.log(results.data.response)
-                this.listaMail.push(results.data.response)
+            .then(response => {
+                console.log(response.data.response)
+                this.listaMail.push(response.data.response)
                 console.log(this.listaMail)
     
             });
         }
+        // var xhttp = new XMLHttpRequest();
+
+        // xhttp.onreadystatechange = function() {
+        //     if(this.readyState == 4 && this.status == 200) {
+ 
+        //     }
+        // };
+
+        // xhttp.open("GET", "https://flynn.boolean.careers/exercises/api/random/mail", true);
+        // xhttp.send();
+
     }
 })
